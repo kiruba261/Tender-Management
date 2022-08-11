@@ -1,0 +1,17 @@
+<html>
+{% extends 'Tender/base.html' %}
+{%block content%}
+<h1>Upate Company Details</h1>
+<form method="POST">
+Company Name<input type="text"Name="Company Name" value="{{cmp.Company_Name}}">
+Company Type<input type="text"Name="Company Type" value="{{cmp.Company_Type}}">
+Address<input type="text"Name="Address" value="{{cmp.Address}}">
+GST <input type="text"Name="Gst" value="{{cmp.Gst}}">
+PAN <input type="text"Name="Pan" value="{{cmp.Pan}}">
+Company Details.<input type="text"Name="Company_Details" value="{{cmp.Company_Details}}">
+{%csrf_token%}
+<input type="submit" value='Update Details'>
+
+</form>
+{% endblock%}
+</html>

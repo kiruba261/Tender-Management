@@ -1,0 +1,35 @@
+<html>
+{% extends 'Tender/base.html' %}
+{%block content%}
+<h1>Company Details</h1>
+<table>
+    <thead>
+        <th>Company_Name</th>
+        <th>Company_Type</th>
+        <th>Address</th>
+        <th>GSt</th>
+        <th>PAN</th>
+        <th>Company_Details</th>
+
+
+    </thead>
+    <tr>
+        {% for cmp in Tcompany %}
+        <td>{{cmp.Company_Name}}</td>
+        <td>{{cmp.Company_Type}}</td>
+        <td>{{cmp.Address}}</td>
+        <td>{{cmp.Gst}}</td>
+        <td>{{cmp.PAN}}</td>
+        <td>{{cmp.Company_Details}}</td>
+        <td><a href="/update/{{cmp.id}}"> Update</a> <a href="/delete/{{cmp.id}}">Delete</a>  </td>
+
+
+    </tr> 
+    {%endfor%}
+</table>
+<a href="/create"> <button type="button">Add new</button></a>
+{% endblock%}
+
+
+
+</html>

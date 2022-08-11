@@ -1,0 +1,11 @@
+<html>
+{% extends 'Tender/base.html' %}
+{%block content%}
+<h1> Add new company details here </h1>
+<form method='POST'>
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" value='Add company details'>
+</form> 
+{% endblock%}
+</html> 
